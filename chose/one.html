@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" font-size="20px">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>风险评估</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/one.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/remconvert750.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="all">
+                <div class="progress" style="width: 0">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="rongqi">
+            <div class="center">
+                <div class="box">
+                    <p class="question">1. 您投资的目的是:</p>
+                    <div class="one clearfix">
+                        <span>A、资产保值，不在乎收益率较低</span>
+                        <div class="select" data-value="1">
+                            <i class="iconfont icon-duihao1" data-value="1"><input type="checkbox" name="box1"></i>
+
+                        </div>
+                    </div>
+                    <div class="two clearfix">
+                        <span>B、在承担一定投资风险的情况下，追
+求一定的收益</span>
+                        <div class="select" data-value="2">
+                            <i class="iconfont icon-duihao1" data-value="2"><input type="checkbox" name="box1"></i>
+
+                        </div>
+                    </div>
+                    <div class="three clearfix">
+                        <span>C、愿意承担较大的投资风险，实现资
+金的大额收益</span>
+                        <div class="select third" data-value="3">
+                            <i class="iconfont icon-duihao1" data-value="3"><input type="checkbox" name="box1"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center" style="display:none">
+                <div class="box">
+                    <p class="question">2. 您的家庭每年的年收入为？（家庭收入情况影响您的风险承受能力）</p>
+                    <div class="one clearfix">
+                        <span>A、10万元以下</span>
+                        <div class="select" data-value="1">
+                            <i class="iconfont icon-duihao1" data-value="1"><input type="checkbox" name="box2"></i>
+
+                        </div>
+                    </div>
+                    <div class="two clearfix">
+                        <span>B、10-50万元</span>
+                        <div class="select" data-value="2">
+                            <i class="iconfont icon-duihao1" data-value="2"><input type="checkbox" name="box2"></i>
+
+                        </div>
+                    </div>
+                    <div class="three clearfix">
+                        <span>C、50万元以上</span>
+                        <div class="select" data-value="3">
+                            <i class="iconfont icon-duihao1" data-value="3"><input type="checkbox" name="box2"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center" style="display:none">
+                <div class="box">
+                    <p class="question">3. 您的投资资金占您家庭年收入的比例是？</p>
+                    <div class="one clearfix">
+                        <span>A、低于10%</span>
+                        <div class="select" data-value="1">
+                            <i class="iconfont icon-duihao1" data-value="1"><input type="checkbox" name="box3"></i>
+
+                        </div>
+                    </div>
+                    <div class="two clearfix">
+                        <span>B、10%-50%</span>
+                        <div class="select" data-value="2">
+                            <i class="iconfont icon-duihao1" data-value="2"><input type="checkbox" name="box3"></i>
+
+                        </div>
+                    </div>
+                    <div class="three clearfix">
+                        <span>C、高于50%</span>
+                        <div class="select" data-value="3">
+                            <i class="iconfont icon-duihao1" data-value="3"><input type="checkbox" name="box3"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center" style="display:none">
+                <div class="box">
+                    <p class="question">4. 如果您购买一种理财产品，您能够接受的产品期限是？</p>
+                    <div class="one clearfix">
+                        <span>A、半年以内</span>
+                        <div class="select" data-value="1">
+                            <i class="iconfont icon-duihao1" data-value="1"><input type="checkbox" name="box4"></i>
+
+                        </div>
+                    </div>
+                    <div class="two clearfix">
+                        <span>B、半年-一年</span>
+                        <div class="select" data-value="2">
+                            <i class="iconfont icon-duihao1" data-value="2"><input type="checkbox" name="box4"></i>
+
+                        </div>
+                    </div>
+                    <div class="three clearfix">
+                        <span>C、一年以上</span>
+                        <div class="select" data-value="3">
+                            <i class="iconfont icon-duihao1" data-value="3"><input type="checkbox" name="box4"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center" style="display:none">
+                <div class="box">
+                    <p class="question">5. 您能承受的最大投资损失是多少？</p>
+                    <div class="one clearfix">
+                        <span>A、10%以内</span>
+                        <div class="select" data-value="1">
+                            <i class="iconfont icon-duihao1" data-value="1"><input type="checkbox" name="box5"></i>
+
+                        </div>
+                    </div>
+                    <div class="two clearfix">
+                        <span>B、10%-50%</span>
+                        <div class="select" data-value="2">
+                            <i class="iconfont icon-duihao1" data-value="2"><input type="checkbox" name="box5"></i>
+
+                        </div>
+                    </div>
+                    <div class="three clearfix">
+                        <span>C、50%以上</span>
+                        <div class="select six" data-value="3">
+                            <i class="iconfont icon-duihao1" data-value="3"><input type="checkbox" name="box5"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center" style="display:none">
+                <div class="box">
+                    <p class="question">6. 您在进行投资时，如何平衡收益与风险之间的关系？</p>
+                    <div class="one clearfix">
+                        <span>A、在本金安全的情况下，投资收益必须达到我的最低要求</span>
+                        <div class="select">
+                            <i class="iconfont icon-duihao1" data-value="1"><input type="checkbox" name="box6"></i>
+
+                        </div>
+                    </div>
+                    <div class="two clearfix">
+                        <span>B、愿意承担一定风险，以平衡的方式寻求一定的资金收益和成长性</span>
+                        <div class="select">
+                            <i class="iconfont icon-duihao1" data-value="2"><input type="checkbox" name="box6"></i>
+
+                        </div>
+                    </div>
+                    <div class="three clearfix">
+                        <span>C、为获得更高的投资回报，愿意承担投资产品市值高波动性而导致的本金大比例损失</span>
+                        <div class="select sixth">
+                            <i class="iconfont icon-duihao1" data-value="3"><input type="checkbox" name="box6"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom">
+            <div class="button1">
+                <a href="#">
+                    <div class="next">
+                        <span>下一题</span>
+                    </div>
+                </a>
+            </div>
+            <div class="button2 clearfix" style="display:none">
+                <a href="#">
+                    <div class="prev">
+                        <span>上一题</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="next submit">
+                        <span>下一题</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <!--<div class="mask" style="display:none">-->
+            <!--<p>温馨提示</p>-->
+            <!--<p>至少选择一项</p>-->
+            <!--<p class="t3">知道了</p>-->
+        <!--</div>-->
+
+    </div>
+</body>
+
+</html>

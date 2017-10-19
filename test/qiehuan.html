@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no" />
+	<title>test</title>
+<style type="text/css">
+
+/*定义大盒子*/
+    .demo{              
+        
+        width:200px;
+        height:150px;
+        overflow: hidden;
+        position: relative;
+    }
+/*图片盒子*/
+    #demoimg{
+        width:600px;
+        height:150px;
+        position: absolute;
+    }
+    #demoimg li{
+        float:left;
+        list-style: none;
+        width:200px;
+        height:150px;
+    }
+    #demoimg img{
+        width: 100%;
+        height: 100%;
+    }
+/*blue 部分是附加效果，图片下边对应的蓝色小块*/
+    #blue{
+        bottom:0;
+        position: absolute;
+    }
+    #blue li{
+        list-style: none;
+        width:30px;
+        height:5px;
+        background:#ccc;
+        float:left;
+        margin: 0 3px;
+    }
+
+
+
+</style>
+</head>
+<body>
+<div class="demo">
+    <ul id="demoimg">
+        <li><img src="wood1.jpg"></li>
+        <li><img src="wood2.jpg"></li>
+        <li><img src="wood3.jpg"></li>
+    </ul>
+    <ul id="blue">
+        <li style="background:blue"></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!-- 随幻灯片变换的图片简介或者可点击切换的小点与blue部分原理差不多 -->
+
+   <!-- <div class="test"></div> -->
+</body>
+<script>
+    var i=0;
+    function qiehuan(){
+        //获取元素
+        var demoimg = document.getElementById("demoimg");
+        var demoli = demoimg.getElementsByTagName("li");
+        //获取图片盒子距左边的距离给left，图片的宽度给swidth，
+        //图片盒子中li即图片总数给lis
+        var left = demoimg.offsetLeft;
+        var swidth = demoli[0].offsetWidth;
+        var lis = demoli.length;
+        //left从0开始逐渐递减，图片盒子向左移动。
+        //当所有图片都移动到左边之后，left=0，重新开始，形成循环播放。
+        if(left>-swidth*(lis-1)){
+            left = left - swidth;
+            demoimg.style.left = left+"px";
+            i = i+1;
+        }else{
+            left = 0;
+            demoimg.style.left = left+"px";
+            i = 0;
+        }
+
+
+        //附加效果 blue部分  
+        var dblue = document.getElementById("blue");
+        //通过参数i设置与图片li对应的blue部分第i个li背景色
+        dblue.getElementsByTagName("li")[i].style.background = "blue";
+        var thisi = dblue.getElementsByTagName("li")[i];
+        var syi = dblue.getElementsByTagName("li");
+        //遍历blue的所有li元素，设置非当前li的背景色，注意:syi[j]!=thisi
+        for(j=0;j<lis;j++){
+            if(syi[j]!=thisi){
+              syi[j].style.background="#ccc";
+            }
+        }
+        return syi;
+    }
+
+    syi.onclick = qiehuan;
+
+//定时器，每隔2000毫秒执行一次qiehuan()代码，数值越小，幻灯片切换越快
+    //window.setInterval("qiehuan()",2000);
+</script>
+</html>
